@@ -1,0 +1,25 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+
+[source.crates-io]
+replace-with = "crates-io-mirror"
+
+[source.crates-io-mirror]
+registry = "https://github.com/rust-lang/crates.io-index"
+
+
+[dependencies]
+diesel = { version = "2.1.0", features = ["postgres", "r2d2", "chrono"] }
+serde = { version = "1.0", features = ["derive"] }
+dotenv = "0.15"
+base64 = "0.13"
+r2d2 = "0.8"
+bcrypt = "0.13"
+chrono = { version = "0.4", features = ["serde"] }
+sodiumoxide = "0.2"
+rocket = "0.5.0-rc.3"
+argon2 = "0.5"
+rand = "0.8" # Para gerar salt
+rocket-session = "0.14.0"
